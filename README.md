@@ -162,14 +162,14 @@ It uses the [Alfred-Workflow][aw] and [docopt][docopt] libraries (both MIT Licen
 
 The icon is by [Jason Long][jlong], from [git-scm.com][git], released under the [Creative Commons Attribution 3.0 Unported Licence][cc].
 
-[aw]: https://github.com/deanishe/alfred-workflow
+[aw]: https://github.com/harrtho/alfred-workflow
 [cc]: http://creativecommons.org/licenses/by/3.0/
-[demo]: https://raw.githubusercontent.com/deanishe/alfred-repos/master/demo.gif
+[demo]: https://raw.githubusercontent.com/harrtho/alfred-repos/master/demo.gif
 [docopt]: http://docopt.org/
-[gh-releases]: https://github.com/deanishe/alfred-repos/releases/latest
+[gh-releases]: https://github.com/harrtho/alfred-repos/releases/latest
 [git]: http://git-scm.com/downloads/logos
 [jlong]: http://twitter.com/jasonlong
 [mit]: http://opensource.org/licenses/MIT
 [packal]: http://www.packal.org/workflow/git-repos
-[v2.1.2]: https://github.com/deanishe/alfred-repos/releases/tag/v2.1.2
-[v1.7]: https://github.com/deanishe/alfred-repos/releases/tag/v1.7
+[v2.1.2]: https://github.com/harrtho/alfred-repos/releases/tag/v2.1.2
+[v1.7]: https://github.com/harrtho/alfred-repos/releases/tag/v1.7

@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>bundleid</key>
-	<string>net.deanishe.alfred-git-repos</string>
+	<string>de.xdevcloud.alfred-repos</string>
 	<key>connections</key>
 	<dict>
 		<key>13C4EEDF-EC8D-4B23-8693-6E050109AFDC</key>
@@ -86,13 +86,13 @@
 		</array>
 	</dict>
 	<key>createdby</key>
-	<string>Dean Jackson</string>
+	<string>Thomas Harr</string>
 	<key>description</key>
 	<string>Find and browse Git repositories</string>
 	<key>disabled</key>
 	<false/>
 	<key>name</key>
-	<string>Git Repos</string>
+	<string>Repos</string>
 	<key>objects</key>
 	<array>
 		<dict>
@@ -460,8 +460,8 @@ Use the `reposhelp` command to see the help file.</string>
 		<string>180</string>
 	</dict>
 	<key>version</key>
-	<string>3.1.2</string>
+	<string>4.0.0</string>
 	<key>webaddress</key>
-	<string>https://github.com/deanishe/alfred-repos</string>
+	<string>https://github.com/harrtho/alfred-repos</string>
 </dict>
 </plist>
