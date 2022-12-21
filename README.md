@@ -171,5 +171,5 @@ The icon is by [Jason Long][jlong], from [git-scm.com][git], released under the 
 [jlong]: http://twitter.com/jasonlong
 [mit]: http://opensource.org/licenses/MIT
 [packal]: http://www.packal.org/workflow/git-repos
-[v2.1.2]: https://github.com/harrtho/alfred-repos/releases/tag/v2.1.2
-[v1.7]: https://github.com/harrtho/alfred-repos/releases/tag/v1.7
+[v2.1.2]: https://github.com/deanishe/alfred-repos/releases/tag/v2.1.2
+[v1.7]: https://github.com/deanishe/alfred-repos/releases/tag/v1.7
