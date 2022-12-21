@@ -2,16 +2,13 @@
   <img src="./src/icon.png" width="128" height="128">
 </h1>
 
-Git Repos Workflow for Alfred
-=============================
+# Repos Workflow for Alfred
 
 Browse, search and open Git repositories from within Alfred.
 
 ![][demo]
 
-
-Download
---------
+## Download
 
 Get the workflow from [GitHub releases][gh-releases].
 
@@ -19,32 +16,28 @@ Get the workflow from [GitHub releases][gh-releases].
 
 For Alfred 3, download [version 2.1.2][v2.1.2], and for Alfred 2, please download [version 1.7][v1.7].
 
-
-Usage
------
+## Usage
 
 This workflow requires some configuration before use. See [Configuration](#configuration) for details.
 
 - `repos [<query>]` — Show a list of your Git repos filtered by `<query>`
-	+ `↩` — Open selected repo in `app_default` (see [configuration](#configuration))
-	+ `⌘+↩` — Open selected repo in `app_cmd` (see [configuration](#configuration))
-	+ `⌥+↩` — Open selected repo in `app_alt` (requires [configuration](#configuration))
-	+ `^+↩` — Open selected repo in `app_ctrl` (requires [configuration](#configuration))
-	+ `⇧+↩` — Open selected repo in `app_shift` (requires [configuration](#configuration))
-	+ `fn+↩` — Open selected repo in `app_fn` (requires [configuration](#configuration))
-	+ `⌘⌥+↩` — Open selected repo in `app_cmd_alt` (requires [configuration](#configuration))
-  + `⌘⌥⇧+↩` — Open selected repo in `app_cmd_alt_shift` (requires [configuration](#configuration))
-  + etc.
-  + etc.
+  - `↩` — Open selected repo in `app_default` (see [configuration](#configuration))
+  - `⌘+↩` — Open selected repo in `app_cmd` (see [configuration](#configuration))
+  - `⌥+↩` — Open selected repo in `app_alt` (requires [configuration](#configuration))
+  - `^+↩` — Open selected repo in `app_ctrl` (requires [configuration](#configuration))
+  - `⇧+↩` — Open selected repo in `app_shift` (requires [configuration](#configuration))
+  - `fn+↩` — Open selected repo in `app_fn` (requires [configuration](#configuration))
+  - `⌘⌥+↩` — Open selected repo in `app_cmd_alt` (requires [configuration](#configuration))
+  - `⌘⌥⇧+↩` — Open selected repo in `app_cmd_alt_shift` (requires [configuration](#configuration))
+  - etc.
+  - etc.
 - `reposettings` — Open `settings.json` in default JSON editor
 - `reposupdate` — Force workflow to update its cached list of repositories. (By default, the list will only be updated—in the background—every 3 hours.)
 - `reposhelp` — Open this file in your browser
 
+## Configuration
 
-Configuration
--------------
-
-Before you can use this workflow, you have to configure one or more folders in which the workflow should search for Git repos. The workflow uses `find` to search for `.git` directories, so you shouldn't add *huge* directory trees to it, and use the `depth` option to restrict the search depth. Typically, a `depth` of `2` will be what you want (i.e. search within subdirectories of specified directory, but no lower). Add directories to search to the `search_dir` array in `settings.json` (see below).
+Before you can use this workflow, you have to configure one or more folders in which the workflow should search for Git repos. The workflow uses `find` to search for `.git` directories, so you shouldn't add _huge_ directory trees to it, and use the `depth` option to restrict the search depth. Typically, a `depth` of `2` will be what you want (i.e. search within subdirectories of specified directory, but no lower). Add directories to search to the `search_dir` array in `settings.json` (see below).
 
 The default `settings.json` file looks like this:
 
@@ -78,26 +71,26 @@ This is my `settings.json`:
   "app_alt": "iTerm",
   "app_cmd": "Finder",
   "app_cmd_alt": [
-    "VSCodium", 
-    "Finder", 
-    "SourceTree", 
+    "VSCodium",
+    "Finder",
+    "SourceTree",
     "iTerm"
   ],
-  "app_ctrl": "SourceTree", 
-  "app_default": "VSCodium", 
-  "app_shift": "Browser", 
-  "global_exclude_patterns": [], 
+  "app_ctrl": "SourceTree",
+  "app_default": "VSCodium",
+  "app_shift": "Browser",
+  "global_exclude_patterns": [],
   "search_dirs": [
     {
-      "depth": 3, 
+      "depth": 3,
       "path": "~/Code"
-    }, 
+    },
     {
       "path": "~/Sites"
     },
     {
       "path": "~/src/git.deanishe.net/deanishe"
-    }, 
+    },
     {
       "path": "~/src/github.com/deanishe"
     }
@@ -109,8 +102,7 @@ This is my `settings.json`:
 
 You can also change the default update interval (3h) in the workflow's configuration sheet in Alfred Preferences. Change the `UPDATE_EVERY_MINS` workflow variable to suit your needs.
 
-
-### Search Directories ###
+### Search Directories
 
 Each entry in the `search_dirs` list must be a mapping.
 
@@ -134,8 +126,7 @@ Code
 
 Set `name_for_parent` to `2`, and `Project_1`, `Project_2` etc. will be shown in Alfred, not `src`, `src`, `src`…
 
-
-### Open in Applications ###
+### Open in Applications
 
 The applications specified by the `app_XYZ` options are all called using `open -a AppName path/to/directory`. You can configure any application that can open a directory in this manner. Some recommendations are Sublime Text, SourceTree, GitHub or iTerm.
 
@@ -163,16 +154,13 @@ Modifiers may be specified in any order. The only requirements are that the key 
 
 You can also use `→` on a result to access Alfred's default File Actions menu.
 
-
-License, Thanks
----------------
+## License, Thanks
 
 This workflow is released under the [MIT Licence][mit].
 
 It uses the [Alfred-Workflow][aw] and [docopt][docopt] libraries (both MIT Licence).
 
 The icon is by [Jason Long][jlong], from [git-scm.com][git], released under the [Creative Commons Attribution 3.0 Unported Licence][cc].
-
 
 [aw]: https://github.com/deanishe/alfred-workflow
 [cc]: http://creativecommons.org/licenses/by/3.0/
