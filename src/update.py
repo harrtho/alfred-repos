@@ -1,7 +1,9 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 # encoding: utf-8
 #
-# Copyright (c) 2014 deanishe@deanishe.net
+# Copyright (c) 2022 Thomas Harr <xDevThomas@gmail.com>
+# Copyright (c) 2014 Dean Jackson <deanishe@deanishe.net>
+#
 # MIT Licence. See http://opensource.org/licenses/MIT
 #
 # Created on 2014-07-04
@@ -12,19 +14,16 @@
 Uses settings from the workflow's `settings.json` file.
 """
 
-from __future__ import print_function, unicode_literals
 
-import sys
 import os
 import subprocess
+import sys
 from fnmatch import fnmatch
-from time import time
 from multiprocessing.dummy import Pool
-
-from workflow import Workflow3
-from workflow.util import utf8ify
+from time import time
 
 from repos import Repo
+from workflow import Workflow
 
 # How many search threads to run at the same time
 CONCURRENT_SEARCHES = 4
@@ -86,7 +85,6 @@ def find_git_repos(dirpath, excludes, depth, uid, gids, name_for_parent=1):
     cmd.append(')')
 
     cmd += ['-name', '.git', '-print']
-    cmd = [utf8ify(s) for s in cmd]
     try:
         output = subprocess.check_output(cmd)
     except Exception as err:
@@ -182,7 +180,7 @@ def main(wf):
 
 
 if __name__ == '__main__':
-    wf = Workflow3()
+    wf = Workflow()
     log = wf.logger
     decode = wf.decode
     sys.exit(wf.run(main))
