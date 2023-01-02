@@ -123,7 +123,7 @@
 				<key>runningsubtext</key>
 				<string>Loading list of repos…</string>
 				<key>script</key>
-				<string>/usr/local/bin/python3 repos.py search "$1"</string>
+				<string>/usr/bin/env python3 repos.py search "$1"</string>
 				<key>scriptargtype</key>
 				<integer>1</integer>
 				<key>scriptfile</key>
@@ -173,7 +173,7 @@
 				<key>escaping</key>
 				<integer>102</integer>
 				<key>script</key>
-				<string>/usr/local/bin/python3 repos.py open $appkey "$1"</string>
+				<string>/usr/bin/env python3 repos.py open $appkey "$1"</string>
 				<key>scriptargtype</key>
 				<integer>1</integer>
 				<key>scriptfile</key>
@@ -215,7 +215,7 @@ variables={allvars}</string>
 				<key>escaping</key>
 				<integer>127</integer>
 				<key>script</key>
-				<string>/usr/local/bin/python3 repos.py settings</string>
+				<string>/usr/bin/env python3 repos.py settings</string>
 				<key>scriptargtype</key>
 				<integer>1</integer>
 				<key>scriptfile</key>
@@ -324,7 +324,7 @@ variables={allvars}</string>
 				<key>escaping</key>
 				<integer>127</integer>
 				<key>script</key>
-				<string>/usr/local/bin/python3 repos.py update</string>
+				<string>/usr/bin/env python3 repos.py update</string>
 				<key>scriptargtype</key>
 				<integer>1</integer>
 				<key>scriptfile</key>
@@ -460,7 +460,7 @@ Use the `reposhelp` command to see the help file.</string>
 		<string>180</string>
 	</dict>
 	<key>version</key>
-	<string>4.0.0</string>
+	<string>4.0.1</string>
 	<key>webaddress</key>
 	<string>https://github.com/harrtho/alfred-repos</string>
 </dict>
