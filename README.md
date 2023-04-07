@@ -156,20 +156,20 @@ You can also use `→` on a result to access Alfred's default File Actions menu.
 
 ## License, Thanks
 
-This workflow is released under the [MIT Licence][mit].
+This workflow is released under the [MIT Licence][mit-licence].
 
 It uses the [Alfred-Workflow][aw] and [docopt][docopt] libraries (both MIT Licence).
 
 The icon is by [Jason Long][jlong], from [git-scm.com][git], released under the [Creative Commons Attribution 3.0 Unported Licence][cc].
 
 [aw]: https://github.com/harrtho/alfred-workflow
-[cc]: http://creativecommons.org/licenses/by/3.0/
+[cc]: https://creativecommons.org/licenses/by/3.0/
 [demo]: https://raw.githubusercontent.com/harrtho/alfred-repos/master/demo.gif
-[docopt]: http://docopt.org/
+[docopt]: https://docopt.org/
 [gh-releases]: https://github.com/harrtho/alfred-repos/releases/latest
-[git]: http://git-scm.com/downloads/logos
-[jlong]: http://twitter.com/jasonlong
-[mit]: http://opensource.org/licenses/MIT
-[packal]: http://www.packal.org/workflow/git-repos
-[v2.1.2]: https://github.com/deanishe/alfred-repos/releases/tag/v2.1.2
+[git]: https://git-scm.com/downloads/logos
+[jlong]: https://twitter.com/jasonlong
+[mit-licence]: https://opensource.org/licenses/MIT
+[packal]: https://www.packal.org/workflow/git-repos
 [v1.7]: https://github.com/deanishe/alfred-repos/releases/tag/v1.7
+[v2.1.2]: https://github.com/deanishe/alfred-repos/releases/tag/v2.1.2
