@@ -4,6 +4,10 @@
 
 # Repos Workflow for Alfred
 
+[![GitHub Version][version-shield]][releases]
+[![GitHub All Releases][downloads-shield]][releases]
+[![GitHub][licence-shield]][mit-licence]
+
 Browse, search and open Git repositories from within Alfred.
 
 ![][demo]
@@ -166,10 +170,14 @@ The icon is by [Jason Long][jlong], from [git-scm.com][git], released under the 
 [cc]: https://creativecommons.org/licenses/by/3.0/
 [demo]: https://raw.githubusercontent.com/harrtho/alfred-repos/master/demo.gif
 [docopt]: https://docopt.org/
+[downloads-shield]: https://img.shields.io/github/downloads/harrtho/alfred-repos/total.svg
 [gh-releases]: https://github.com/harrtho/alfred-repos/releases/latest
 [git]: https://git-scm.com/downloads/logos
 [jlong]: https://twitter.com/jasonlong
+[licence-shield]: https://img.shields.io/github/license/harrtho/alfred-repos.svg
 [mit-licence]: https://opensource.org/licenses/MIT
 [packal]: https://www.packal.org/workflow/git-repos
+[releases]: https://github.com/harrtho/alfred-repos/releases
 [v1.7]: https://github.com/deanishe/alfred-repos/releases/tag/v1.7
 [v2.1.2]: https://github.com/deanishe/alfred-repos/releases/tag/v2.1.2
+[version-shield]: https://img.shields.io/github/release/harrtho/alfred-repos.svg
