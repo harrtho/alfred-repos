@@ -219,7 +219,7 @@ def repo_url(path):
 
     """
     url = subprocess.check_output(['git', 'config', 'remote.origin.url'],
-                                  cwd=path)
+                                  cwd=path).decode('utf-8')
     url = re.sub(r'(^.+@)|(^https://)|(^git://)|(.git$)', '', url)
     return 'https://' + re.sub(r':', '/', url).strip()
 
