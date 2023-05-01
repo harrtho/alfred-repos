@@ -162,11 +162,11 @@ You can also use `→` on a result to access Alfred's default File Actions menu.
 
 This workflow is released under the [MIT Licence][mit-licence].
 
-It uses the [Alfred-Workflow][aw] and [docopt][docopt] libraries (both MIT Licence).
+It uses the [Alfred-PyWorkflow][alfred-pyworkflow] and [docopt][docopt] libraries (both MIT Licence).
 
 The icon is by [Jason Long][jlong], from [git-scm.com][git], released under the [Creative Commons Attribution 3.0 Unported Licence][cc].
 
-[aw]: https://github.com/harrtho/alfred-workflow
+[alfred-pyworkflow]: https://github.com/harrtho/alfred-pyworkflow
 [cc]: https://creativecommons.org/licenses/by/3.0/
 [demo]: https://raw.githubusercontent.com/harrtho/alfred-repos/master/demo.gif
 [docopt]: https://docopt.org/
