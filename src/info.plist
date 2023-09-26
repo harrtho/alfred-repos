@@ -460,7 +460,7 @@ Use the `reposhelp` command to see the help file.</string>
 		<string>180</string>
 	</dict>
 	<key>version</key>
-	<string>4.0.2</string>
+	<string>4.1.0</string>
 	<key>webaddress</key>
 	<string>https://github.com/harrtho/alfred-repos</string>
 </dict>
