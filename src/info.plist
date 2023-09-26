@@ -259,7 +259,7 @@ variables={allvars}</string>
 				<key>escaping</key>
 				<integer>127</integer>
 				<key>script</key>
-				<string>open README.html</string>
+				<string>open 'https://github.com/harrtho/alfred-repos/blob/main/README.md'</string>
 				<key>scriptargtype</key>
 				<integer>1</integer>
 				<key>scriptfile</key>
