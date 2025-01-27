@@ -99,7 +99,7 @@ This is my `settings.json`:
 **Note:** If you specify `Browser`, `Safari`, `Google Chrome`, `Webkit` or `Firefox` as an
 application, it will be passed the remote repo URL, not the local filepath. The default remote name
 is `origin`. However, you can globally change it to a different remote, such as `upstream`, by using
-the `remote_name` setting. Browser` will open the URL in your default browser.
+the `remote_name` setting. `Browser` will open the URL in your default browser.
 
 ### Search Directories
 
