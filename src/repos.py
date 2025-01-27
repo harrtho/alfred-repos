@@ -35,6 +35,7 @@ from collections import namedtuple
 from workflow import ICON_INFO, ICON_WARNING, Workflow
 from workflow.background import is_running, run_in_background
 from workflow.update import Version
+from workflow.notify import notify
 
 # How often to check for new/updated repos
 DEFAULT_UPDATE_INTERVAL = 180  # minutes
@@ -215,10 +216,22 @@ def repo_url(path):
         path (str): Path to git repo.
 
     Returns:
-        str: URL of remote/origin.
+        str: URL of remote specified in the remote_name setting. Defaults to origin.
 
     """
-    url = subprocess.check_output(['git', 'config', 'remote.origin.url'],
+    remote_name = wf.settings.get('remote_name')
+    # Check if key does not exist or value is set to None
+    if remote_name is None:
+        remote_name = 'origin'
+
+    remotes = subprocess.check_output(['git', 'remote'], cwd=path).decode('utf-8').splitlines()
+    log.debug('remotes=%s', remotes)
+    if remote_name not in remotes:
+        notify('No remote named {}'.format(remote_name), 'Check your settings', 'Available remotes: {}'.format(', '.join(remotes)), 'Sosumi')
+        log.error('No remote named %s in %s', remote_name, path)
+        return None
+
+    url = subprocess.check_output(['git', 'config', 'remote.' + remote_name + '.url'],
                                   cwd=path).decode('utf-8')
     url = re.sub(r'(^.+@)|(^https://)|(^git://)|(.git$)', '', url)
     return 'https://' + re.sub(r':', '/', url).strip()
@@ -246,11 +259,12 @@ def do_open(opts):
     for app in apps:
         if app in BROWSERS:
             url = repo_url(opts.path)
-            log.info('opening %s with %s ...', url, app)
-            if app == 'Browser':
-                subprocess.call(['open', url])
-            else:
-                subprocess.call(['open', '-a', app, url])
+            if url:
+                log.info('opening %s with %s ...', url, app)
+                if app == 'Browser':
+                    subprocess.call(['open', url])
+                else:
+                    subprocess.call(['open', '-a', app, url])
         else:
             log.info('opening %s with %s ...', opts.path, app)
             subprocess.call(['open', '-a', app, opts.path])
