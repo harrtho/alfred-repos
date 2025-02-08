@@ -310,6 +310,12 @@ def do_search(repos, opts):
         log.debug(r)
         pretty_path = subtitle = r.path.replace(home, '~')
         app = subtitles.get('default')
+
+        # Check if Icon Path Exists else use default
+        icon = 'icon.png'
+        if os.path.isfile(os.path.dirname(r.path) + '/' + '.alfred-repos-icon.png'):
+            icon = os.path.dirname(r.path) + '/' + '.alfred-repos-icon.png'
+
         if app:
             subtitle += ' //  ' + app
         it = wf.add_item(
@@ -319,7 +325,7 @@ def do_search(repos, opts):
             uid=r.path,
             valid=valid.get('default', False),
             type='file',
-            icon='icon.png'
+            icon=icon
         )
         it.setvar('appkey', 'default')
 

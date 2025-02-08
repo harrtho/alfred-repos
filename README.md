@@ -167,6 +167,12 @@ Modifiers may be specified in any order. The only requirements are that the key 
 
 You can also use `→` on a result to access Alfred's default File Actions menu.
 
+### Change Repository Icons
+
+You can set an icon for all repositories that share the same parent directory.
+Simply add an icon file named `.alfred-repos-icon.png` to the parent directory of the repositories. The icon will then appear in Alfred's results.
+If no icon is found, the default icon will be displayed.
+
 ## Bug Reports and Feature Requests
 
 Please use [GitHub issues][gh-issues] to report bugs or request features.
